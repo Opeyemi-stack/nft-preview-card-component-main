@@ -1,33 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | NFT preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | NFT preview card component</title>
 
-  Equilibrium #3429
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-  Our Equilibrium collection promotes balance and calm.
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
+      body {
+        background-color: hsl(217, 54%, 11%);
+        font-family: "Outfit", sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+      }
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .card {
+        background-color: hsl(216, 50%, 16%);
+        width: 90%;
+        padding: 20px;
+        border-radius: 16px;
+      }
+
+      .card,
+      .card__img-wrapper,
+      .card__img {
+        border-radius: 10px;
+      }
+
+      .card__img {
+        width: 100%;
+        height: auto;
+      }
+
+      .card__title {
+        color: hsl(0, 0%, 100%);
+        font-weight: 400;
+        font-size: 24px;
+        margin: 16px 0;
+      }
+
+      .card__description {
+        color: hsl(215, 51%, 70%);
+        font-weight: 300;
+      }
+
+      .card__meta {
+        margin: 16px 0;
+      }
+
+      .card__meta-item {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .card__meta-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        gap: 5px;
+      }
+
+      .icon-wrapper {
+        /* margin-right: 5px; */
+        width: 16px;
+        height: 16px;
+      }
+
+      .card__meta-price {
+        color: hsl(178, 100%, 50%);
+      }
+
+      .card__meta-item {
+        color: hsl(215, 51%, 70%);
+      }
+
+      .hr {
+        background-color: hsl(215, 32%, 27%);
+        height: 1px;
+        width: 100%;
+        margin: 5px 0;
+      }
+
+      .card__creator {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .card__avater {
+        width: 32px;
+        height: 32px;
+      }
+
+      .card__creator-text {
+        color: hsl(215, 51%, 70%);
+        font-size: 14px;
+      }
+
+      .creator-name {
+        color: hsl(0, 0%, 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card__img-wrapper">
+        <img class="card__img" src="images/image-equilibrium.jpg" alt="" />
+      </div>
+      <h1 class="card__title">Equilibrium #3429</h1>
+      <p class="card__description">
+        Our Equilibrium collection promotes balance and calm.
+      </p>
+      <div class="card__meta">
+        <ul class="card__meta-item">
+          <li class="card__meta-list card__meta-price">
+            <span class="icon-wrapper">
+              <img
+                class="icon-ethereum list-icon"
+                src="images/icon-ethereum.svg"
+                alt="Ethereum"
+              />
+            </span>
+            0.041 ETH
+          </li>
+          <li class="card__meta-list card__meta-time">
+            <span class="icon-wrapper">
+              <img src="images/icon-clock.svg" alt="" class="list-icon"
+            /></span>
+            3 days left
+          </li>
+        </ul>
+      </div>
+      <div class="hr"></div>
+      <div class="card__creator">
+        <span class="avater__wraper">
+          <img
+            src="images/image-avatar.png"
+            alt="Jules Wyvern"
+            class="card__avater"
+          />
+        </span>
+        <p class="card__creator-text">
+          Creation of <span class="creator-name">Jules Wyvern</span>
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
